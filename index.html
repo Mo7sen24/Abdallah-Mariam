@@ -536,7 +536,7 @@ b.style.transition='opacity .6s var(--ease)';b.style.opacity=0;
 setTimeout(function(){b.style.display='none';t.style.display='block';t.style.animation='rise 1.4s var(--ease) both';window.scrollTo({top:0,behavior:RM?'auto':'smooth'})},600)});
 /* music + autoscroll */
 var bgm=new Audio(),snd=$('#snd'),tapgo=$('#tapgo'),auto=false,pos=0,t0=0,lt=0,want=false;
-bgm.loop=true;bgm.preload='auto';bgm.addEventListener('error',function(){snd.hidden=true;want=false});bgm.src='music.mp3';
+bgm.loop=true;bgm.preload='auto';bgm.addEventListener('error',function(){snd.hidden=true;want=false});bgm.src='song 2.mp3';
 if(matchMedia('(hover:hover)').matches)tapgo.querySelector('.cap').textContent='Click to continue';
 function sndUI(on){snd.classList.toggle('off',!on);snd.setAttribute('aria-pressed',on?'true':'false');snd.setAttribute('aria-label',on?'Mute music':'Play music')}
 function fadeIn(){var v=0,iv=setInterval(function(){v=Math.min(.7,v+.035);try{bgm.volume=v}catch(e){}if(v>=.7)clearInterval(iv)},150)}
