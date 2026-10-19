@@ -584,7 +584,7 @@ if(h&&$('#'+h)&&h!=='home')unlock();
 document.addEventListener('touchmove',function(e){if(root.classList.contains('lock'))e.preventDefault()},{passive:false});
 document.addEventListener('wheel',function(e){if(root.classList.contains('lock'))e.preventDefault()},{passive:false});
 document.addEventListener('keydown',function(e){if(root.classList.contains('lock')&&[32,33,34,35,36,38,40].indexOf(e.keyCode)>-1&&document.activeElement!==tapgo)e.preventDefault()});
-tapgo.addEventListener('click',function(){if(tapgo.classList.contains('done'))return;tapgo.classList.add('done');unlock();playMusic();requestAnimationFrame(startAuto)});
+tapgo.addEventListener('click',function(){if(tapgo.classList.contains('done'))return;tapgo.classList.add('done');unlock();playMusic()});
 })();
 </script>
 </body>
